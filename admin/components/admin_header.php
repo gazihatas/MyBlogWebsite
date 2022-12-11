@@ -13,9 +13,10 @@ if(isset($message)){
 
 <header class="header">
 
-   <a href="dashboard.php" class="logo">Yönetici<span>Panel</span></a>
+   <a href="index.php" class="logo">Yönetici<span>Paneli</span></a>
 
-   <div class="profile">
+
+    <div class="profile">
       <?php
          $select_profile = $conn->prepare("SELECT * FROM `admin` WHERE id = ?");
          $select_profile->execute([$admin_id]);
@@ -28,7 +29,7 @@ if(isset($message)){
    <nav class="navbar">
 
       <a href="../admin/index.php"><i class="fas fa-home"></i> <span>Ana Sayfa</span></a>
-      <a href="../../index.php" target="_blank"><i class="fas fa-home"></i> <span>Siteyi Görüntüle</span></a>
+      <a href="../../index.php" target="_blank"><i class="fas fa-search"></i> <span>Siteyi Görüntüle</span></a>
       <a href="add_posts.php"><i class="fas fa-pen"></i> <span>add posts</span></a>
       <a href="view_posts.php"><i class="fas fa-eye"></i> <span>view posts</span></a>
       <a href="admin_accounts.php"><i class="fas fa-user"></i> <span>admin accounts</span></a>
