@@ -94,11 +94,11 @@ include 'components/like_post.php';
                }
             }
          }else{
-            echo '<p class="empty">no posts found for this category!</p>';
+            echo '<p class="empty">Bu kategoride blog bulunamadı.</p>';
          }
          }
       }else{
-         echo '<p class="empty">no liked posts available!</p>';
+         echo '<p class="empty">Beğenilmiş blog yok.</p>';
       }
       ?>
    </div>

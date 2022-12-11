@@ -86,7 +86,7 @@ if(isset($_POST['delete_comment'])){
          <img src="../uploaded_img/<?= $fetch_posts['image']; ?>" class="image" alt="">
       <?php } ?>
       <div class="title"><?= $fetch_posts['title']; ?></div>
-      <div class="content"><?= $fetch_posts['content']; ?></div>
+      <div class="content"><?=   html_entity_decode($fetch_posts['content']); ?></div>
       <div class="icons">
          <div class="likes"><i class="fas fa-heart"></i><span><?= $total_post_likes; ?></span></div>
          <div class="comments"><i class="fas fa-comment"></i><span><?= $total_post_comments; ?></span></div>
@@ -100,7 +100,7 @@ if(isset($_POST['delete_comment'])){
    <?php
          }
       }else{
-         echo '<p class="empty">no posts added yet! <a href="add_posts.php" class="btn" style="margin-top:1.5rem;">add post</a></p>';
+         echo '<p class="empty">Henüz blog paylaşılmadı! <a href="add_posts.php" class="btn" style="margin-top:1.5rem;">add post</a></p>';
       }
    ?>
 

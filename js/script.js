@@ -31,3 +31,11 @@ window.onscroll = () =>{
 document.querySelectorAll('.content-150').forEach(content => {
    if(content.innerHTML.length > 150) content.innerHTML = content.innerHTML.slice(0, 150);
 });
+
+
+let switch_button = document.getElementById('switch-button');
+switch_button.addEventListener('click',function()
+{
+	this.classList.toggle('switch-active');
+}
+)

@@ -25,6 +25,8 @@ include 'components/like_post.php';
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
@@ -40,7 +42,7 @@ include 'components/like_post.php';
 
 <section class="categories">
 
-   <h1 class="heading">post categories</h1>
+   <h1 class="heading">Kategoriler</h1>
 
    <div class="box-container">
       <div class="box"><span>01</span><a href="category.php?category=nature">HTML</a></div>

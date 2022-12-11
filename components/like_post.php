@@ -19,11 +19,11 @@ if(isset($_POST['like_post'])){
       }else{
          $add_like = $conn->prepare("INSERT INTO `likes`(user_id, post_id, admin_id) VALUES(?,?,?)");
          $add_like->execute([$user_id, $post_id, $admin_id]);
-         $message[] = 'added to likes';
+         $message[] = 'Beğenilenenlere eklendi.';
       }
       
    }else{
-         $message[] = 'please login first!';
+         $message[] = 'Lütfen önce Giriş yapın..';
    }
 
 }

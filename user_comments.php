@@ -87,9 +87,9 @@ if(isset($_POST['delete_comment'])){
 
 <section class="comments-container">
 
-   <h1 class="heading">your comments</h1>
+   <h1 class="heading">Yorumların</h1>
 
-   <p class="comment-title">your comments on the posts</p>
+   <p class="comment-title">Bloglardaki yorumlarınız...</p>
    <div class="user-comments-container">
       <?php
          $select_comments = $conn->prepare("SELECT * FROM `comments` WHERE user_id = ?");
@@ -103,21 +103,21 @@ if(isset($_POST['delete_comment'])){
             $select_posts->execute([$fetch_comments['post_id']]);
             while($fetch_posts = $select_posts->fetch(PDO::FETCH_ASSOC)){
          ?>
-         <div class="post-title"> from : <span><?= $fetch_posts['title']; ?></span> <a href="view_post.php?post_id=<?= $fetch_posts['id']; ?>" >view post</a></div>
+         <div class="post-title"> from : <span><?= $fetch_posts['title']; ?></span> <a href="view_post.php?post_id=<?= $fetch_posts['id']; ?>" >Blogları gör</a></div>
          <?php
             }
          ?>
          <div class="comment-box"><?= $fetch_comments['comment']; ?></div>
          <form action="" method="POST">
             <input type="hidden" name="comment_id" value="<?= $fetch_comments['id']; ?>">
-            <button type="submit" class="inline-option-btn" name="open_edit_box">edit comment</button>
-            <button type="submit" class="inline-delete-btn" name="delete_comment" onclick="return confirm('delete this comment?');">delete comment</button>
+            <button type="submit" class="inline-option-btn" name="open_edit_box">Yorumu güncelle</button>
+            <button type="submit" class="inline-delete-btn" name="delete_comment" onclick="return confirm('delete this comment?');">Yorumu sil</button>
          </form>
       </div>
       <?php
             }
          }else{
-            echo '<p class="empty">no comments added yet!</p>';
+            echo '<p class="empty">Henüz yorum yapılmadı.</p>';
          }
       ?>
    </div>

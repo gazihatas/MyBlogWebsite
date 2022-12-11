@@ -4,6 +4,13 @@ include '../components/connect.php';
 
 session_start();
 
+function dataready($data) {
+   $data = trim($data);
+   $data = stripslashes($data);
+   $data = htmlspecialchars($data);
+   return $data;
+   }
+
 $admin_id = $_SESSION['admin_id'];
 
 if(!isset($admin_id)){
@@ -11,25 +18,27 @@ if(!isset($admin_id)){
 }
 
 if(isset($_POST['publish'])){
-
+   
    $name = $_POST['name'];
-   $name = filter_var($name, FILTER_SANITIZE_STRING);
+   //$name = filter_var($name, FILTER_SANITIZE_STRING);
    $title = $_POST['title'];
-   $title = filter_var($title, FILTER_SANITIZE_STRING);
-   $content = $_POST['content'];
-   $content = filter_var($content, FILTER_SANITIZE_STRING);
+   //$title = filter_var($title, FILTER_SANITIZE_STRING);
+   $content =  dataready($_POST['content']);
+   //$content = filter_var($content, FILTER_SANITIZE_STRING);
    $category = $_POST['category'];
-   $category = filter_var($category, FILTER_SANITIZE_STRING);
+   //$category = filter_var($category, FILTER_SANITIZE_STRING);
    $status = 'active';
    
    $image = $_FILES['image']['name'];
-   $image = filter_var($image, FILTER_SANITIZE_STRING);
+   //$image = filter_var($image, FILTER_SANITIZE_STRING);
    $image_size = $_FILES['image']['size'];
    $image_tmp_name = $_FILES['image']['tmp_name'];
    $image_folder = '../uploaded_img/'.$image;
 
    $select_image = $conn->prepare("SELECT * FROM `posts` WHERE image = ? AND admin_id = ?");
    $select_image->execute([$image, $admin_id]);
+
+   
 
    if(isset($image)){
       if($select_image->rowCount() > 0 AND $image != ''){
@@ -59,7 +68,7 @@ if(isset($_POST['draft'])){
    $name = filter_var($name, FILTER_SANITIZE_STRING);
    $title = $_POST['title'];
    $title = filter_var($title, FILTER_SANITIZE_STRING);
-   $content = $_POST['content'];
+   $content =  dataready($_POST['content']);
    $content = filter_var($content, FILTER_SANITIZE_STRING);
    $category = $_POST['category'];
    $category = filter_var($category, FILTER_SANITIZE_STRING);
@@ -96,6 +105,8 @@ if(isset($_POST['draft'])){
 
 }
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -112,6 +123,8 @@ if(isset($_POST['draft'])){
    <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/admin_style.css">
 
+   <!-- <script src="//cdn.ckeditor.com/4.20.1/full/ckeditor.js"></script> -->
+   
 </head>
 <body>
 
@@ -126,8 +139,10 @@ if(isset($_POST['draft'])){
       <input type="hidden" name="name" value="<?= $fetch_profile['name']; ?>">
       <p>post title <span>*</span></p>
       <input type="text" name="title" maxlength="100" required placeholder="add post title" class="box">
+      <!-- Content--->
       <p>post content <span>*</span></p>
-      <textarea name="content" class="box" required maxlength="10000" placeholder="write your content..." cols="30" rows="10"></textarea>
+      <textarea id="editor" name="content" class="box" ></textarea> 
+       
       <p>post category <span>*</span></p>
       <select name="category" class="box" required>
          <option value="" selected disabled>-- select category* </option>
@@ -165,15 +180,21 @@ if(isset($_POST['draft'])){
 
 
 
-
-
-
-
-
-
-
 <!-- custom js file link  -->
 <script src="../js/admin_script.js"></script>
+<script src="../ckeditor/ckeditor.js"></script>
+<script src="../ckfinder/ckfinder.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+<script>
+var editor = CKEDITOR.replace('editor')
+CKFinder.setupCKEditor(editor);
+
+
+</script>
+
+
+
 
 </body>
 </html>

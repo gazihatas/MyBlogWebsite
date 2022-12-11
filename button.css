@@ -1,0 +1,63 @@
+body {
+	font-family: calibri;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.switch-button {
+	position: relative;
+	height: 4rem;
+	background:#ececec;
+	overflow: hidden;
+	dispLay: flex;
+	align-items : center;
+	border-radius : 4rem;
+	cursor: pointer;
+}
+
+.switch-button:before {
+	content: "";
+	position: absolute;
+	Left:-50%;
+	top:-100%;
+	height: 300%;
+	width: 100%;
+	background:linear-gradient(to top right,#702F4E,#164373);
+	border-radius: 50%;
+	transition: 0.25s;
+}
+
+.switch-item
+{
+	position: relative;
+	padding:3rem;
+	color:#555;
+	font-weight: 600;
+	transition: 0.3s;
+
+
+}
+.switch-item:first-child
+{
+	color:#FFF;
+
+}
+
+.switch-button.switch-active .switch-item:first-child
+{
+	color: #555;
+}
+
+.switch-button.switch-active .switch-item:last-child
+{
+	color: #FFF;
+}
+
+.switch-button.switch-active:before
+{
+	left: 50%;
+	background:linear-gradient(to top right,#F64373,#164373);
+
+}

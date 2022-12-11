@@ -1,6 +1,6 @@
 <?php
 
-include 'components/connect.php';
+require_once('components/connect.php');
 
 session_start();
 
@@ -49,21 +49,21 @@ include 'components/like_post.php';
                $count_user_likes->execute([$user_id]);
                $total_user_likes = $count_user_likes->rowCount();
          ?>
-         <p> welcome <span><?= $fetch_profile['name']; ?></span></p>
-         <p>total comments : <span><?= $total_user_comments; ?></span></p>
-         <p>posts liked : <span><?= $total_user_likes; ?></span></p>
-         <a href="update.php" class="btn">update profile</a>
+         <p> Hoşgeldin <span><?= $fetch_profile['name']; ?></span></p>
+         <p>Yorum sayın : <span><?= $total_user_comments; ?></span></p>
+         <p>Beğenilmiş blog sayısı : <span><?= $total_user_likes; ?></span></p>
+         <a href="update.php" class="btn">Profili güncelle</a>
          <div class="flex-btn">
-            <a href="user_likes.php" class="option-btn">likes</a>
-            <a href="user_comments.php" class="option-btn">comments</a>
+            <a href="user_likes.php" class="option-btn">Beğeniler</a>
+            <a href="user_comments.php" class="option-btn">Yorumlar</a>
          </div>
          <?php
             }else{
          ?>
-            <p class="name">login or register!</p>
+            <p class="name">Giriş Yap yada Kaydol!</p>
             <div class="flex-btn">
-               <a href="login.php" class="option-btn">login</a>
-               <a href="register.php" class="option-btn">register</a>
+               <a href="login.php" class="option-btn">Giriş Yap</a>
+               <a href="register.php" class="option-btn">Kayıt Ol</a>
             </div> 
          <?php
           }
@@ -71,7 +71,7 @@ include 'components/like_post.php';
       </div>
 
       <div class="box">
-         <p>categories</p>
+         <p>Kategoriler</p>
          <div class="flex-box">
             <a href="category.php?category=nature" class="links">HTML</a>
             <a href="category.php?category=education" class="links">CSS</a>
@@ -83,12 +83,12 @@ include 'components/like_post.php';
             <a href="category.php?category=design" class="links">Design</a>
             <a href="category.php?category=fashion" class="links">Donanım</a>
             <a href="category.php?category=persional" class="links">SQL</a>
-            <a href="all_category.php" class="btn">view all</a>
+            <a href="all_category.php" class="btn">Hepsini gör</a>
          </div>
       </div>
 
       <div class="box">
-         <p>authors</p>
+         <p>Yazarlar</p>
          <div class="flex-box">
          <?php
             $select_authors = $conn->prepare("SELECT DISTINCT name FROM `admin` LIMIT 10");
@@ -100,10 +100,10 @@ include 'components/like_post.php';
             <?php
             }
          }else{
-            echo '<p class="empty">no posts added yet!</p>';
+            echo '<p class="empty">Henüz blog paylaşılmadı!</p>';
          }
          ?>  
-         <a href="authors.php" class="btn">view all</a>
+         <a href="authors.php" class="btn">Hepsini gör</a>
          </div>
       </div>
 
@@ -113,7 +113,7 @@ include 'components/like_post.php';
 
 <section class="posts-container">
 
-   <h1 class="heading">latest posts</h1>
+   <h1 class="heading">Son eklenen bloglar</h1>
 
    <div class="box-container">
 
@@ -155,8 +155,9 @@ include 'components/like_post.php';
          }
          ?>
          <div class="post-title"><?= $fetch_posts['title']; ?></div>
-         <div class="post-content content-150"><?= $fetch_posts['content']; ?></div>
-         <a href="view_post.php?post_id=<?= $post_id; ?>" class="inline-btn">read more</a>
+         <div class="post-content content-150"><?=  html_entity_decode($fetch_posts['content']); ?></div>
+         <div class="post-content content-150"><?=  html_entity_decode($fetch_posts['content']); ?></div>
+         <a href="view_post.php?post_id=<?= $post_id; ?>" class="inline-btn">Daha fazla oku</a>
          <a href="category.php?category=<?= $fetch_posts['category']; ?>" class="post-cat"> <i class="fas fa-tag"></i> <span><?= $fetch_posts['category']; ?></span></a>
          <div class="icons">
             <a href="view_post.php?post_id=<?= $post_id; ?>"><i class="fas fa-comment"></i><span>(<?= $total_post_comments; ?>)</span></a>
@@ -167,13 +168,13 @@ include 'components/like_post.php';
       <?php
          }
       }else{
-         echo '<p class="empty">no posts added yet!</p>';
+         echo '<p class="empty">Henüz blog paylaşılmadı!</p>';
       }
       ?>
    </div>
 
    <div class="more-btn" style="text-align: center; margin-top:1rem;">
-      <a href="posts.php" class="inline-btn">view all posts</a>
+      <a href="posts.php" class="inline-btn">Tüm blogları gör</a>
    </div>
 
 </section>
@@ -196,7 +197,7 @@ include 'components/like_post.php';
 
 
 
-<?php include 'components/footer.php'; ?>
+<?php  require_once('components/footer.php'); ?>
 
 <script src="js/script.js"></script>
 

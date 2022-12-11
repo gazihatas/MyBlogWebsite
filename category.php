@@ -44,7 +44,7 @@ include 'components/like_post.php';
 
 <section class="posts-container">
 
-   <h1 class="heading">post categories</h1>
+   <h1 class="heading">Kategoriler</h1>
 
    <div class="box-container">
 
@@ -87,7 +87,7 @@ include 'components/like_post.php';
          ?>
          <div class="post-title"><?= $fetch_posts['title']; ?></div>
          <div class="post-content content-150"><?= $fetch_posts['content']; ?></div>
-         <a href="view_post.php?post_id=<?= $post_id; ?>" class="inline-btn">read more</a>
+         <a href="view_post.php?post_id=<?= $post_id; ?>" class="inline-btn">Daha fazla oku</a>
          <div class="icons">
             <a href="view_post.php?post_id=<?= $post_id; ?>"><i class="fas fa-comment"></i><span>(<?= $total_post_comments; ?>)</span></a>
             <button type="submit" name="like_post"><i class="fas fa-heart" style="<?php if($confirm_likes->rowCount() > 0){ echo 'color:var(--red);'; } ?>  "></i><span>(<?= $total_post_likes; ?>)</span></button>
@@ -97,7 +97,7 @@ include 'components/like_post.php';
       <?php
          }
       }else{
-         echo '<p class="empty">no posts found for this category!</p>';
+         echo '<p class="empty">Bu kategoride blog bulunamadı.</p>';
       }
       ?>
    </div>

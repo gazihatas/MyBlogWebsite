@@ -13,7 +13,7 @@ if(!isset($admin_id)){
 if(isset($_POST['delete'])){
 
    $p_id = $_POST['post_id'];
-   $p_id = filter_var($p_id, FILTER_SANITIZE_STRING);
+   //$p_id = filter_var($p_id, FILTER_SANITIZE_STRING);
    $delete_image = $conn->prepare("SELECT * FROM `posts` WHERE id = ?");
    $delete_image->execute([$p_id]);
    $fetch_delete_image = $delete_image->fetch(PDO::FETCH_ASSOC);
@@ -78,7 +78,7 @@ if(isset($_POST['delete'])){
          <?php } ?>
          <div class="status" style="background-color:<?php if($fetch_posts['status'] == 'active'){echo 'limegreen'; }else{echo 'coral';}; ?>;"><?= $fetch_posts['status']; ?></div>
             <div class="title"><?= $fetch_posts['title']; ?></div>
-         <div class="posts-content"><?= $fetch_posts['content']; ?></div>
+         <div class="posts-content"><?=   html_entity_decode($fetch_posts['content']); ?></div>
          <div class="icons">
             <div class="likes"><i class="fas fa-heart"></i><span><?= $total_post_likes; ?></span></div>
             <div class="comments"><i class="fas fa-comment"></i><span><?= $total_post_comments; ?></span></div>
@@ -92,7 +92,7 @@ if(isset($_POST['delete'])){
       <?php
             }
          }else{
-            echo '<p class="empty">no posts added yet! <a href="add_posts.php" class="btn" style="margin-top:1.5rem;">add post</a></p>';
+            echo '<p class="empty">Henüz <a href="add_posts.php" class="btn" style="margin-top:1.5rem;">add post</a></p>';
          }
       ?>
 

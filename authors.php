@@ -38,7 +38,7 @@ include 'components/like_post.php';
 
 <section class="authors">
 
-   <h1 class="heading">authors</h1>
+   <h1 class="heading">Yazarlar</h1>
 
    <div class="box-container">
 
@@ -66,7 +66,7 @@ include 'components/like_post.php';
       <p>total posts : <span><?= $total_admin_posts; ?></span></p>
       <p>posts likes : <span><?= $total_admin_likes; ?></span></p>
       <p>posts comments : <span><?= $total_admin_comments; ?></span></p>
-      <a href="author_posts.php?author=<?= $fetch_authors['name']; ?>" class="btn">view posts</a>
+      <a href="author_posts.php?author=<?= $fetch_authors['name']; ?>" class="btn">Blogları gör</a>
    </div>
    <?php
       }

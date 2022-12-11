@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
 
 :root{
-   --main-color:#4834d4;
+   --main-color:#42a5f5;
    --red:#e74c3c;
    --orange:#f39c12;
    --black:#34495e;
@@ -215,7 +215,7 @@ section{
    top:0; left:0;
    background-color: var(--white);
    z-index: 1000;
-   border-right: var(--border);
+   /* border-right: var(--border); */
    width: 35rem;
    padding:2rem;
    min-height: 100vh;

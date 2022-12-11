@@ -14,13 +14,13 @@ if(isset($_POST['save'])){
 
    $post_id = $_GET['id'];
    $title = $_POST['title'];
-   $title = filter_var($title, FILTER_SANITIZE_STRING);
+   //$title = filter_var($title, FILTER_SANITIZE_STRING);
    $content = $_POST['content'];
-   $content = filter_var($content, FILTER_SANITIZE_STRING);
+   //$content = filter_var($content, FILTER_SANITIZE_STRING);
    $category = $_POST['category'];
-   $category = filter_var($category, FILTER_SANITIZE_STRING);
+   //$category = filter_var($category, FILTER_SANITIZE_STRING);
    $status = $_POST['status'];
-   $status = filter_var($status, FILTER_SANITIZE_STRING);
+   //$status = filter_var($status, FILTER_SANITIZE_STRING);
 
    $update_post = $conn->prepare("UPDATE `posts` SET title = ?, content = ?, category = ?, status = ? WHERE id = ?");
    $update_post->execute([$title, $content, $category, $status, $post_id]);
@@ -29,7 +29,7 @@ if(isset($_POST['save'])){
    
    $old_image = $_POST['old_image'];
    $image = $_FILES['image']['name'];
-   $image = filter_var($image, FILTER_SANITIZE_STRING);
+   //$image = filter_var($image, FILTER_SANITIZE_STRING);
    $image_size = $_FILES['image']['size'];
    $image_tmp_name = $_FILES['image']['tmp_name'];
    $image_folder = '../uploaded_img/'.$image;
@@ -130,13 +130,13 @@ if(isset($_POST['delete_image'])){
       <p>post status <span>*</span></p>
       <select name="status" class="box" required>
          <option value="<?= $fetch_posts['status']; ?>" selected><?= $fetch_posts['status']; ?></option>
-         <option value="active">active</option>
-         <option value="deactive">deactive</option>
+         <option value="active">Aktif</option>
+         <option value="deactive">Pasif</option>
       </select>
       <p>post title <span>*</span></p>
       <input type="text" name="title" maxlength="100" required placeholder="add post title" class="box" value="<?= $fetch_posts['title']; ?>">
       <p>post content <span>*</span></p>
-      <textarea name="content" class="box" required maxlength="10000" placeholder="write your content..." cols="30" rows="10"><?= $fetch_posts['content']; ?></textarea>
+      <textarea id="editor" name="content" class="box" required maxlength="10000" placeholder="write your content..." cols="30" rows="10"><?= $fetch_posts['content']; ?></textarea>
       <p>post category <span>*</span></p>
       <select name="category" class="box" required>
          <option value="<?= $fetch_posts['category']; ?>" selected><?= $fetch_posts['category']; ?></option>
@@ -170,7 +170,7 @@ if(isset($_POST['delete_image'])){
       <?php } ?>
       <div class="flex-btn">
          <input type="submit" value="save post" name="save" class="btn">
-         <a href="view_posts.php" class="option-btn">go back</a>
+         <a href="view_posts.php" class="option-btn">Geri dön.</a>
          <input type="submit" value="delete post" class="delete-btn" name="delete_post">
       </div>
    </form>
@@ -178,7 +178,7 @@ if(isset($_POST['delete_image'])){
    <?php
          }
       }else{
-         echo '<p class="empty">no posts found!</p>';
+         echo '<p class="empty">Blog bulunamadı!</p>';
    ?>
    <div class="flex-btn">
       <a href="view_posts.php" class="option-btn">view posts</a>
@@ -201,6 +201,17 @@ if(isset($_POST['delete_image'])){
 
 <!-- custom js file link  -->
 <script src="../js/admin_script.js"></script>
+
+<script src="../ckeditor/ckeditor.js"></script>
+<script src="../ckfinder/ckfinder.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+<script>
+var editor = CKEDITOR.replace('editor')
+CKFinder.setupCKEditor(editor);
+
+
+</script>
 
 </body>
 </html>
