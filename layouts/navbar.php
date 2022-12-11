@@ -16,24 +16,17 @@
                     <a href="../home.php" class="button button--ghost">BLOG</a>
                 </div> -->
 
-                <div class="navden" >
-                    <ul >
-                        <li  class="portfolio" > <a class="aktif" href="#"> <i class='bx bx-user' ></i>  PORTFOLİO</a> </li>
-                        <li  class="blogio"> <a class="pasif" href="../home.php">   <i class='bx bx-book-bookmark'></i> BLOG </a></li>
-              
-                  
 
-                    </ul>
-                </div>
 
 
                 <div class="nav__menu">
                     <ul class="nav__list">
 
+
                         <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">    <i class='bx bx-home-alt' ></i>       </i>
+                            <a href="#home" class="nav__link active-link">    <i class='bx bx-world' ></i>       </i>
                             </a>
-                        </li> 
+                        </li>
 
 
                         <li class="nav__item">
@@ -42,13 +35,13 @@
 
                          <li class="nav__item">
                             <a href="#skills" class="nav__link"> <i class='bx bx-book'></i> </a>
-                        </li> 
+                        </li>
 
                         <li class="nav__item">
                             <a href="#work" class="nav__link">
                                 <i class='bx bx-briefcase' ></i>
                             </a>
-                        </li> 
+                        </li>
 
                         <li class="nav__item">
                             <a href="#contact" class="nav__link">

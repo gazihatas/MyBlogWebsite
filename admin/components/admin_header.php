@@ -13,7 +13,7 @@ if(isset($message)){
 
 <header class="header">
 
-   <a href="dashboard.php" class="logo">Admin<span>Panel</span></a>
+   <a href="dashboard.php" class="logo">Yönetici<span>Panel</span></a>
 
    <div class="profile">
       <?php
@@ -26,10 +26,13 @@ if(isset($message)){
    </div>
 
    <nav class="navbar">
-      <a href="dashboard.php"><i class="fas fa-home"></i> <span>home</span></a>
+
+      <a href="../admin/index.php"><i class="fas fa-home"></i> <span>Ana Sayfa</span></a>
+      <a href="../../index.php" target="_blank"><i class="fas fa-home"></i> <span>Siteyi Görüntüle</span></a>
       <a href="add_posts.php"><i class="fas fa-pen"></i> <span>add posts</span></a>
       <a href="view_posts.php"><i class="fas fa-eye"></i> <span>view posts</span></a>
-      <a href="admin_accounts.php"><i class="fas fa-user"></i> <span>accounts</span></a>
+      <a href="admin_accounts.php"><i class="fas fa-user"></i> <span>admin accounts</span></a>
+      <a href="users_accounts.php"><i class="fas fa-user"></i> <span>user accounts</span></a>
       <a href="../components/admin_logout.php" style="color:var(--red);" onclick="return confirm('logout from the website?');"><i class="fas fa-right-from-bracket"></i><span>logout</span></a>
    </nav>
 

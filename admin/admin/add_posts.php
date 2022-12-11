@@ -121,7 +121,7 @@ if(isset($_POST['draft'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="../css/admin_style.css">
+   <link rel="stylesheet" href="../assets/css/admin_style.css">
 
    <!-- <script src="//cdn.ckeditor.com/4.20.1/full/ckeditor.js"></script> -->
    
@@ -181,19 +181,15 @@ if(isset($_POST['draft'])){
 
 
 <!-- custom js file link  -->
-<script src="../js/admin_script.js"></script>
-<script src="../ckeditor/ckeditor.js"></script>
-<script src="../ckfinder/ckfinder.js"></script>
+<script src="../assets/css/admin_script.js"></script>
+<script src="../assets/ckeditor/ckeditor.js"></script>
+<script src="../assets/ckfinder/ckfinder.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
 <script>
 var editor = CKEDITOR.replace('editor')
 CKFinder.setupCKEditor(editor);
-
-
 </script>
-
-
 
 
 </body>
