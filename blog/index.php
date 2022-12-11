@@ -6,23 +6,21 @@
     <!--=============== MAIN ===============-->
     <main class="main">
 
-        <div class="row">
-
-            <div class="col-md-8">
+       
                  <!--=============== WORK ===============-->
             <section class="work section" id="work">
-                <span class="section__subtitle"></span>
-                <h2 class="section__title">Projelerim</h2>
+                <!-- <span class="section__subtitle"></span> -->
+                <!-- <h2 class="section__title">Projelerim</h2> -->
 
-                <div class="work__filters">
+                <!-- <div class="work__filters">
                     <span class="work__item active-work"  data-filter='all' >All</span>
                     <span class="work__item" data-filter='.web'>Web</span>
                     <span class="work__item" data-filter='.mobil'>Mobil</span>
                     <span class="work__item" data-filter='.design'>WEB API</span>
-                </div>
+                </div> -->
 
-                <div class="work__container container grid">
-                    <div class="work__card mix web">
+                <!-- <div class="work__container container grid"> -->
+                    <!-- <div class="work__card mix web">
                         <img src="img/work1.jpg" alt="" class="work__img">
                         <h3 class="work__title"></h3>
                         <a href="" class="work__button">
@@ -63,23 +61,86 @@
                         <a href="" class="work__button">
                             Demo <i class='bx bx-right-arrow-alt work__icon'></i>
                         </a>
+                    </div> -->
+                <!-- </div> -->
+
+                
+            <div class="projcard-container container">
+		
+        <div class="projcard projcard-blue">
+            <div class="projcard-innerbox">
+                <img class="projcard-img" src="https://picsum.photos/800/600?image=1041" />
+                <div class="projcard-textbox">
+                    <div class="projcard-title">Card Title</div>
+                    <div class="projcard-subtitle">This explains the card in more detail</div>
+                    <div class="projcard-bar"></div>
+                    <div class="projcard-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                    <div class="projcard-tagbox">
+                        <span class="projcard-tag">HTML</span>
+                        <span class="projcard-tag">CSS</span>
                     </div>
                 </div>
+            </div>
+        </div>
+        
+        <div class="projcard projcard-red">
+            <div class="projcard-innerbox">
+                <img class="projcard-img" src="https://picsum.photos/800/600?image=1080" />
+                <div class="projcard-textbox">
+                    <div class="projcard-title">That's Another Card</div>
+                    <div class="projcard-subtitle">I don't really think that I need to explain anything here</div>
+                    <div class="projcard-bar"></div>
+                    <div class="projcard-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    <div class="projcard-tagbox">
+                        <span class="projcard-tag">PHP</span>
+                        <span class="projcard-tag">SQL</span>
+                        <span class="projcard-tag">Database</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="projcard projcard-green">
+            <div class="projcard-innerbox">
+                <img class="projcard-img" src="https://picsum.photos/800/600?image=1039" />
+                <div class="projcard-textbox">
+                    <div class="projcard-title">And a Third Card</div>
+                    <div class="projcard-subtitle">You know what this is by now</div>
+                    <div class="projcard-bar"></div>
+                    <div class="projcard-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</div>
+                    <div class="projcard-tagbox">
+                        <span class="projcard-tag">Excel</span>
+                        <span class="projcard-tag">VBA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="projcard projcard-customcolor" style="--projcard-color: #F5AF41;">
+            <div class="projcard-innerbox">
+                <img class="projcard-img" src="https://picsum.photos/800/600?image=943" />
+                <div class="projcard-textbox">
+                    <div class="projcard-title">Last Card</div>
+                    <div class="projcard-subtitle">That's the last one. Have a nice day!</div>
+                    <div class="projcard-bar"></div>
+                    <div class="projcard-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                    <div class="projcard-tagbox">
+                        <span class="projcard-tag">iOS</span>
+                        <span class="projcard-tag">Android</span>
+                        <span class="projcard-tag">Cordova</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
             </section>
 
-            </div>
        
-            <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-        </div>
+            
+    
+      
 
-    </main>
+ </main>
 
     <?php require_once('../layouts/footer.php');  ?>

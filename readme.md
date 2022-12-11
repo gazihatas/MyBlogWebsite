@@ -5,3 +5,6 @@
 - Admin paneli güncellenecek
 
 
+# Not
+- container class'ı themayı tetikliyor..
+
