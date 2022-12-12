@@ -179,3 +179,4 @@ sr.reveal('.home__social, .home__scroll',{delay:900,origin:'bottom'})
 document.querySelectorAll(".projcard-description").forEach(function(box) {
 	$clamp(box, {clamp: 6});
 });
+

@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
 
         <!--=============== CSS ===============-->
+        <!-- <link rel="stylesheet" href="../assets/css/style2.scss"> -->
         <link rel="stylesheet" href="../assets/css/style.css">
         
         

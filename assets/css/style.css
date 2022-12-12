@@ -296,12 +296,12 @@ img {
 
 /* Demo Code: */
 
-/* .projcard-container {
+.projcard-container {
 	margin: 50px 0;
 }
 
 /* Actual Code: */
-.projcard-container,
+ .projcard-container,
 .projcard-container * {
 	box-sizing: border-box;
 }
@@ -494,9 +494,26 @@ img {
 	border-top: 13px solid transparent;
 	right: -10px;
 	top: 0;
-} */
+} 
 
  /* blockcardend */
+
+
+/* 2.blogcard */
+
+
+
+
+/* blogcardend2 */
+
+
+
+/* 3.karddesing */
+
+
+/* 3.carddesignend */
+
+
 
 
 .navden ul 
@@ -1419,6 +1436,11 @@ overflow: hidden;
 .icon-item:nth-child(5) a:hover:before { 
   background: var(--social-icon5); 
 }
+
+
+/* CARD DESİGN  */
+
+
 
 
 

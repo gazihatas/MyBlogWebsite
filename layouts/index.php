@@ -66,7 +66,7 @@
                             14 Temmuz 2001 Doğumluyum.Ankara'da yaşıyorum. Selçuk Üniversitesi Bilgisayar Mühendisliği 
                             3. Sınıf öğrencisiyim.Yazılımda ağırlıklı olarak Web üzerinde çalışıyorum. 
                         </p>
-                        <a href="#contact" class="button">İletişime geç.</a>
+                        <a href="#contact" class="button">.</a>
                     </div>
                 </div>
             </section>
