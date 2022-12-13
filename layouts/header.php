@@ -13,7 +13,10 @@
 
         <script src="https://kit.fontawesome.com/1c71e95d0d.js" crossorigin="anonymous"></script>
 		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
         <!--=============== SWIPER CSS ===============-->
