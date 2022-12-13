@@ -12,12 +12,17 @@
     <div class="row container" style="margin: auto;">
     <main class="main" style="margin:auto;">
 
- 
+            
+                <div class="work__container container grid">
+                 
+                
+                </div>
+           
 
 
     
 
-    <div class="row" style="margin:auto;">
+    <div class="row container " style="margin:auto;">
               <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="row" style="margin:auto;">
                   <div class="col-lg-12 col-md-12 col-sm-12 ">
@@ -46,7 +51,7 @@
                   <section class="skills section" id="skills" >
             
 
-            <div class=" grid"    >
+            <div class=" grid container"    >
              
                 <div style="text-align: center; align-items: center; justify-content: flex; width: 100%;  " class="skills__content">
                 <h3 class="skills__title">Yazarlar</h3>
@@ -108,7 +113,7 @@
                 <div class="row">
                   <div class="col-lg-12 col-md-12 col-sm-12 ">
 
-                  <div class="container2  " >
+                  <div class="container2" >
          <h2>Post</h2>
          <div class="blog-post">
             <div class="blog-post_img">

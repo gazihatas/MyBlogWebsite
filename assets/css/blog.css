@@ -1,17 +1,5 @@
 
 
-.parent {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-    .div1 { grid-area: 1 / 1 / 6 / 4; }
-    .div2 { grid-area: 1 / 4 / 2 / 6; }
-    .div3 { grid-area: 2 / 4 / 3 / 6; }
-    .div4 { grid-area: 3 / 4 / 6 / 6; }
 
  .container2 h2
 {
