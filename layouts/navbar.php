@@ -1,9 +1,6 @@
    
         <!-- progress  -->
-        <div id="progress">
-            <span id="progress-value">&#x1F815</span>
-        </div>
-
+     
 
         <!--=============== HEADER ===============-->
         <header class="header" id="header">
@@ -17,6 +14,19 @@
                 </div> -->
 
 
+                <div class="pricing-table-container1">
+                <div class="pricing-header1" style="display: flex;">
+
+                    <div class="plans-switch-container1" >  
+                        <a href="../layouts/index.php"> <span class="monthly1" style="color: black;">PORTFOLİO &nbsp;</span> </a>
+                    </div>
+                     <div class="plans-switch-container1">  
+                       <a href="../blog/index.php"> <span class="monthly1"  style="color: black;">BLOG</span></a>
+                    </div>
+                </div>
+
+
+                </div>
 
 
                 <div class="nav__menu">
@@ -24,7 +34,7 @@
 
 
                         <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">    <i class='bx bx-world' ></i>       </i>
+                            <a href="#home" class="nav__link active-link">   <i class='bx bx-home'></i>     
                             </a>
                         </li>
 

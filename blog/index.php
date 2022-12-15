@@ -1,6 +1,6 @@
 <?php
     require_once('../layouts/header.php'); 
-    require_once('../layouts/navbar.php'); 
+    require_once('../layouts/blognavbar.php'); 
     ?>
 
 
@@ -33,7 +33,7 @@
              
                 <div style="text-align: center; align-items: center; justify-content: flex; width: 100%; " class="skills__content">
                 <h3 class="skills__title">Giriş yap ya da Kaydol!</h3>
-                <a href="#contact" class="button" style="" >Giriş Yap</a> 
+                <a href="../layouts/login.html" class="button" style="" >Giriş Yap</a> 
                 <a href="#contact" class="button" style="margin-top: 10px; ">Kaydol</a>
                 
               
@@ -51,7 +51,7 @@
                   <section class="skills section" id="skills" >
             
 
-            <div class=" grid container"    >
+            <div class=" grid container" >
              
                 <div style="text-align: center; align-items: center; justify-content: flex; width: 100%;  " class="skills__content">
                 <h3 class="skills__title">Yazarlar</h3>
@@ -133,7 +133,7 @@
                   
                     <div style="display: flex; justify-content: space-between;"> 
                      <div  style="align-items: end;" > 
-                          <a href="" class="blog-post_cta">Read more</a> 
+                          <a href="blogcomment.php" class="blog-post_cta">Read more</a> 
                      </div>
                    <div style="margin-bottom:20px; margin: 15px;"> 
                         <i class='bx bx-message-square-dots' style="font-size: 30px;"></i>

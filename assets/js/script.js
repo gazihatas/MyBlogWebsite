@@ -158,6 +158,12 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+
+
+
+
+
+
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 
 const sr = ScrollReveal(
@@ -179,4 +185,6 @@ sr.reveal('.home__social, .home__scroll',{delay:900,origin:'bottom'})
 document.querySelectorAll(".projcard-description").forEach(function(box) {
 	$clamp(box, {clamp: 6});
 });
+
+
 
