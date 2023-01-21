@@ -76,7 +76,7 @@ require_once '../../config/default.php';
 
 <script src="<?=JS_PATH;?>/script.js">
 
-
+    <?=$arow->analytics_kodu;?>
 </script>
 </body>
 </html>

@@ -72,6 +72,12 @@ if(isset($_POST['submit'])){
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="<?=$arow->site_aciklama;?>">
+<meta name="keywords" content="<?=$arow->site_kelimeler;?>">
+
+<meta name="google-site-verification" content="<?=$arow->google_dogrulama_kodu;?>"/>
+<meta name="msvalidate.01" content="<?= $arow->bing_dogrulama_kodu;?>" />
+<meta name="yandex-verification" content="<?=$arow->yandex_dogrulama_kodu;?>" />
 
 <!--=============== FAVICON ===============-->
 <link rel="shortcut icon" href="<?=IMG_PATH;?>img/favicon.png" type="image/x-icon">

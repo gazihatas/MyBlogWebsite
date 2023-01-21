@@ -29,6 +29,7 @@ if(isset($message)){
        <a href="<?=SITE_URL;?>" target="_blank"><i class="fas fa-search"></i> <span>Siteyi Görüntüle</span></a>
        <a href="<?=SITE_URL;?>/components/blog/" target="_blank"><i class="fas fa-book"></i> <span>Bloglar Site</span></a>
       <a href="index.php"><i class="fas fa-home"></i> <span>Ana Sayfa</span></a>
+      <a href="ayar.php"><i class="fas fa-home"></i> <span>Site ayarları</span></a>
       <a href="add_posts.php"><i class="fas fa-pen"></i> <span>İçerik Ekle</span></a>
       <a href="view_posts.php"><i class="fas fa-eye"></i> <span>İçerik Görüntüle</span></a>
       <a href="admin_accounts.php"><i class="fas fa-user"></i> <span>Hesaplar</span></a>
